@@ -1,0 +1,476 @@
+
+/* 定义一个公共版心盒子 */
+.wrapper{
+    width: 1200px;
+    margin: 0px auto;
+}
+/* 固定侧边栏 */
+.subnav{
+    /* 固定定位  */
+    position: fixed;
+    /* 垂直水平居中 */
+    top: 50%;
+    left: 50%;
+    /* 往右推639像素 */
+    margin-left: 630px;
+
+    width: 200px;
+    height: 400px;
+    background-color: green;
+}
+
+/* header盒子 */
+.header{
+    /* 固定定位  */
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* 固定定位为 必须加宽度 */
+    width: 100%;
+    height:100px;
+    /* background-color: #1c76d0; */
+    background-color: white;
+    /* 阴影 */
+    box-shadow:0 5px 5px rgba(0, 0, 0, .7);
+    /* 层级100 */
+    z-index: 100;
+}
+.logo{  
+    /* logo功能；点击跳转页面 */
+    width: 195px;
+	height: 41px;
+    /* background-color: skyblue; */
+    /* logo 右外边距 */
+    margin-right: 100px;
+}
+.header .wrapper{
+    /* 头部版心  上内边距 */
+    padding-top: 20px;
+    /* 创建flex容器 */
+    display: flex;
+}
+.header h1 a{
+    /* 转为块级元素  设置高度 */
+    display: block;
+    height: 41px;
+    /* logo设置背景图片，不经常更换 */
+    background-image: url(../images/logo.png);
+    /* background-color: black; */
+    /* 字体透明  搜索引擎优化 */
+    color: transparent;
+}
+
+/* nav导航盒子*/
+.nav{
+    width: 244px;
+    height: 35px;
+    /* background-color: skyblue; */
+    /* nav 右外边距 */
+    margin-right: 96px;
+}
+.nav ul{
+    /* 创建flex容器 */
+    display: flex ;
+    justify-content: space-between;
+    /* 上边距 */
+}
+.nav ul li{
+    padding: 8px;
+}
+.nav a{
+    font-size: 19px;
+}
+/* 鼠标悬浮时状态 */
+.nav li:hover{
+    border-bottom: 3px solid #00A4FF;
+}
+
+/* search  搜索盒子 */
+.search{
+    /* 父元素或祖先元素有相对定位 子元素才能绝对定位 */
+    position: relative;
+
+    width: 412px;
+    height: 40px;
+    /* background-color: skyblue; */
+    /* 右外边距 */
+    margin-right: 32px;
+}
+.search input{
+    width: 370px;
+    height: 40px;
+    border-radius: 20px;
+    /* 边框为0 */
+    border: 0px solid #000;
+    /* 去掉点击后的黑色边框 */
+    outline: 0;
+    background-color: #F3F5F7;
+    /* 左内边距 */
+    padding-left: 19px;
+}
+.search a{
+    /* 子盒子绝对定位   */
+    position: absolute;
+    top: 4px;
+    right: 45px;
+
+    /* background-color: gray; */
+    padding: 8px 8px 8px 0px;
+}
+
+/* <!-- user  用户盒子 --> */
+.user{
+    width: 116px;
+    height: 30px;
+    /* background-color: skyblue; */
+}
+.user a{
+    width: 116px;
+    height: 30px;
+}
+.user img{
+    width: 30px;
+    height: 30px;
+    /* background-color: blanchedalmond; */
+    /* 图片圆角 */
+    border-radius: 50%;
+    /* 让图片与文字垂直居中对齐 */
+    vertical-align: middle;
+}
+.user a span{
+    font-size: 16px;
+}
+/* header盒子 */
+
+/* banner盒子 */
+.banner{
+    /* height: 420px; */
+    background-color: #0092CB;
+    margin-top: 100px;
+}
+.banner .wrapper{
+    /* 高度 */
+   /* height: 420px; */
+   background: url(../uploads/banner.png) no-repeat;
+   /* 创建flex容器 */
+   display: flex;
+   /* 沿着主轴两边对齐 */
+   justify-content: space-between;
+    /* 沿着侧轴垂直居中 */
+   align-items: center;
+}
+.banner .left{
+    width: 192px;
+    /* height: 420px; */
+    /* background-color: #005576; */
+    /* 黑色半透明 */
+    background-color: rgba(0, 0, 0, .42);
+}
+.banner .left ul li{
+    width: 191px;
+    height: 46px;
+    /* background-color: blanchedalmond; */
+    
+}
+.banner .left li a{
+    /* 转为行内块元素 */
+    display: inline-block;
+    width: 191px;
+    height: 46px;
+    color: white;
+    /* background-color: skyblue; */
+    display: flex;
+    /* 沿着主轴两端对齐 */
+    justify-content: space-between;
+    /* 沿着侧轴垂直居中对齐 */
+    align-items: center;
+    /* 左右内边距 */
+    padding: 0px 20px;
+    /* 过渡 */
+    transition: all .3s;
+}
+
+.banner .left a img{
+    width: 10px;
+    height: 10px;
+}
+.banner .left a:hover{
+    /* 鼠标悬停时状态 */
+    background-color: rgba(0, 0, 0, .2);
+    color: skyblue;
+    padding-left: 30px;
+    
+}
+.banner .right{
+    width: 218px;
+    /* height: 305px; */
+    background-color: #209DD5;
+    border-radius: 10px;
+}
+.banner .right h3{
+    height: 41px;
+    font-weight: normal;
+    color: white;
+    padding: 12px 0px 10px 14px;
+}
+
+.banner .right .content{
+    width: 218px;
+    height: 257px;
+    background-color: white;
+    border-radius: 10px;
+    padding-left: 14px;
+}
+.banner .content dl{
+    border-bottom:2px #E0E0E0 solid ;
+    padding-bottom: 9px;
+    padding-top: 9px;
+}
+.banner .content dd{
+    margin-top: 8px;
+    font-size: 12px;
+    color: #989898;
+}
+.banner .content dd span{
+    color: #4CBFFF;
+}
+.banner .content div{
+    width: 190px;
+    background-color: #00A4FF; height: 32px;
+    text-align: center;
+    border-radius: 20px;
+    margin-top: 14px;
+    padding: 5px 0px;
+}
+.banner .content a{
+    /* 转为块内元素 */
+    display: block;
+    width: 190px;
+    color: white;    
+}
+/* banner盒子 */
+
+ /* <!-- recommend盒子  精品推荐模块 --> */
+ .recommend{
+    /* 粘性定位 */
+    position: sticky;
+    /* 距离顶部100px */
+    top: 100px;
+    /* 加上层级，否则会被相对定位元素盖住 */
+    z-index: 90;
+    
+	width: 1200px;
+	height: 60px;
+	background-color: #ffffff;
+    /* 阴影 */
+	box-shadow: 0px 1px 2px 0px 
+		rgba(211, 211, 211, 0.5);
+    /* 创建flex容器 */
+    display: flex;
+    /*沿着主轴两端居中对齐 */
+    justify-content: space-between;
+    /* 沿着侧轴垂直居中对齐 */
+    align-items: center;
+    /* 左右内边距 */
+    padding: 0px 20px;
+}
+.recommend h3{
+    color: #33B6FF;
+    font-weight: normal;
+}
+.recommend ul{
+    width: 911px;
+    height: 25px;
+    /* background-color: skyblue; */
+    /* 创建flex容器 */
+    display: flex;
+    /* 圣杯布局 */
+    flex: 1;
+}
+.recommend ul li{
+    /* 字数不同，不能给宽度 */
+    border-right: 1px solid #E2E2E2;
+    padding: 0px 24px;
+}
+/* 去除最后一个竖线 */
+.recommend ul li:last-child{
+    border-right: none;
+}
+.recommend ul a:hover{
+    color: #02A5FF;
+}
+.recommend div a{
+    color: #02A5FF;
+}
+/* <!-- recommend盒子  精品推荐模块 -->  */
+
+/* 课程模块  */
+.hd{
+    height: 30px;
+    /* background-color: skyblue; */
+    /* 创建flex容器 */
+    display: flex;
+    /* 沿着主轴两端对齐 */
+    justify-content: space-between;
+    /* 沿着侧轴垂直居中对齐 */
+    align-items: center;
+    margin: 31px 0px 15px;
+}
+.hd a{
+    color: #B0B0B1;
+}
+.bd ul{
+     /* 创建flex容器 */
+    display: flex;
+    /* 沿着主轴两端对齐 */
+    justify-content: space-between;
+    /* 自动换行 */
+    flex-wrap: wrap;
+    background-color: #F3F5F7;
+}
+.bd ul li{
+    /* 祖先元素相对定位  以便子后续子元素加热点标准 */
+    position: relative;
+    margin-bottom: 14px;
+     /* 过渡 */
+    transition: .3s;
+}
+.bd ul li:hover{
+    /* 阴影 */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, .3);
+    margin-top: -10px;
+}
+.bd li a{
+    display: block;
+    width: 228px;
+    height: 271px;
+    background-color: white;
+    /* background-color: blanchedalmond; */
+    /* 内容全部居中对齐 */
+    text-align: center;
+
+}
+.bd a h4{
+    font-weight: normal;
+    /* 给高度 防止出现多行情况 */
+    height: 47px;
+    /* background-color: yellow; */
+    margin: 15px 20px 0px;
+}
+.bd a img{
+    height: 156px;
+}
+.bd a span{
+    color: #F9893F;
+}
+/* 课程模块  */
+
+/* 前端模块 */
+.wrapper{
+    margin-top: 20px;
+}
+.wrapper .hd{
+    justify-content: space-between;
+}
+
+.wrapper .hd ul{
+    width: 308px;
+    display: flex;
+    justify-content: space-between;
+}
+.wrapper .hd ul li a{
+    color: #464646;
+}
+.wrapper .hd ul li a:hover{
+    color: #15AAFD;
+}
+.wrapper .bd{
+    /* height: 571px; */
+    display: flex;
+    justify-content: space-between;
+    /* overflow: hidden; */
+}
+.wrapper .bd .left{
+    width: 228px;
+    height: 386px;
+    background-color: #3DC4BA;
+}
+.wrapper .bd .left img{
+    height: 400px;
+}
+.wrapper .bd .right div{
+    height: 100px;
+}
+.wrapper .bd .right ul{
+    margin-top: 15px;
+} 
+/* 前端模块 */
+
+/* python模块 */
+.wrapper .python{
+    height: 300px;
+}
+/* python模块 */
+
+/* 人工智能模块 */
+.wrapper .bd .line{
+    width: 1200px;
+}
+/* 人工智能模块 */
+
+/* JavaEE模块 */
+/* 与人工智能模块一致 */
+/* JavaEE模块 */
+
+/* footer底部盒子 */
+.footer .wrapper{
+    display: flex;
+    padding: 60px 0px;
+    justify-content: space-between;
+}
+.footer .wrapper .left{
+    width: 432px;
+    height: 148px;
+    /* background-color: skyblue; */
+}
+.footer .wrapper .left img{
+    width: 195px;
+    height: 41px;
+}
+.footer .wrapper .left p{
+    margin: 24px 0px 14px;
+    font-size: 12px;
+    color: #696969;
+}
+.footer .wrapper .left a{
+    display: block;
+    padding: 8px 31px;
+    width: 120px;
+    height: 36px;
+    color: #40BBFF;
+    border: 1px solid #40BBFF;
+}
+.footer .wrapper .right{
+    width: 515px;
+    height: 151px;
+    /* background-color: blanchedalmond; */
+    /* 创建flex容器 */
+    display: flex;
+    justify-content: space-between;
+}
+.footer .wrapper .right dl h4{
+    font-weight: normal;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+.footer .wrapper .right dl dd{
+    margin-bottom: 3px;
+}
+.footer .wrapper .right dl dd a{
+    color: #666666;
+    font-size: 14px;
+}
+.footer .wrapper .right dl a:hover{
+    color: #0092CB;
+}
+/* footer底部盒子 */
